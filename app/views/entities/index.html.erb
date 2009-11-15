@@ -1,0 +1,8 @@
+<h3>Features</h3>
+<br />
+<br />
+<% @entities.each do |e| %>
+<p><h3> <%= e.description %> </h3></p>
+<%= link_to e.title, entity_path(e) %>
+<% end %>
+

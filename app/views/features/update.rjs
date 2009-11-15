@@ -1,0 +1,2 @@
+page.replace_html 'notice', "Updated: #{@feature.title}" 
+page[:notice].visual_effect :highlight

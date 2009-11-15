@@ -1,0 +1,11 @@
+<h3><%= @about %></h3>
+<p><%= @introduction %></p>
+<br />
+
+<p><%= link_to "Documentation", :controller => "entities", :action => "index" %></p>
+<%= link_to 'New', home_index_path %>
+
+<p><strong>Example</strong></p>
+
+<%= text_area_tag 'example_code', @example, :rows => 30, :cols => 80, :class => 'ta' %>
+

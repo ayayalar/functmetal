@@ -1,0 +1,2 @@
+page.replace_html 'notice', "Created: #{@home.key}" 
+page[:notice].visual_effect :highlight

@@ -1,0 +1,17 @@
+<% form_tag(:action => "create") do %>
+<table>
+	<tr>
+		<td><%= label_tag 'Email:' %></td>
+		<td><%= text_field_tag 'email' %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag 'Password:' %></td>
+		<td><%= password_field_tag 'pass' %></td>
+	</tr>
+	<tr>
+		<td  colspan="2" align="right">
+			<%= submit_tag "Login", :id => "submit", :name => "submit" %>
+		</td>
+	</tr>
+</table>
+<% end %>

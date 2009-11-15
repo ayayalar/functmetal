@@ -1,0 +1,11 @@
+<p><h2><%= @entity.title %> features</h2></p>
+<br />
+<br />
+<% @entity.features.each do |f|%>
+	<%= link_to f.title, entity_feature_path(@entity, f) %><br />
+<% end %>
+<% if session[:user] %>
+	<p>Add <%= link_to "new", new_entity_feature_path(@entity)%> feature</p>
+<% end %>
+
+<%= link_to 'Back', entities_path%>

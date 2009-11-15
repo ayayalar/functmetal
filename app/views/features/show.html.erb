@@ -1,0 +1,8 @@
+<strong><%= @feature.title %></strong>
+<p><i><%= @feature.description %></i></p>
+<p><%= text_area_tag 'feature_code', @feature.code, :rows => 15, :cols => 50 %></p>
+<% if session[:user] %>
+<p><%= link_to 'Edit', edit_entity_feature_path(@feature.entity.id, @feature)%></p>
+<% end %>
+Back to <%= link_to @entity.title, entity_path(@entity) %>
+

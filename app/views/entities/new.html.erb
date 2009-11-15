@@ -1,0 +1,24 @@
+<div id="notify">
+	<span id="notice">
+	</span>	
+</div>
+<br />
+<div>
+  <% remote_form_for(@entity) do |f| -%>
+	  <table>
+	  <%= error_messages_for :entity %>
+	  <tr>
+	    <td valign="top"><%= f.label :title, "Title:" %></td>
+	    <td><%= f.text_field :title %></td>
+	  </tr>
+	  <tr>
+	    <td valign="top"><%= f.label :description, "Description:" %></td>
+	    <td><%= f.text_area :description %></td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" align="right"><%= f.submit "Submit" %>
+	  </tr>
+	  </table>
+  <% end -%>
+</div>
+<br />
