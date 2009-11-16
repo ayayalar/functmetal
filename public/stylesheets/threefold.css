@@ -6,11 +6,7 @@ width: 90%;
 margin: 10px auto;
 background-color: #fff;
 color: #333;
-border: 1px solid gray;
 line-height: 130%;
-border-width: 2px;
-border-color: black;
-border-style: ridge;
 }
 
 #top
@@ -86,8 +82,9 @@ body, p, ol, ul, td {
 }
 body
 {
-	background-image: url('/images/metal.jpg');
-  	background-repeat: repeat;
+	/*background-image: url('/images/metal.jpg');
+  	background-repeat: repeat;*/
+	background-color: #ccc;
 }
 pre {
   background-color: #eee;
