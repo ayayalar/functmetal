@@ -41,7 +41,7 @@ class HomeController < ApplicationController
   end
   
   def create
-    @home = Home.new(params[:id])
+    @home = Home.new(params[:home])
     @home.save
   end
   
