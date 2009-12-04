@@ -1,15 +1,7 @@
 class HomeController < ApplicationController
   def index
       @about = "About"
-      @introduction =
-      %{"I've developed FunctMetaL (Functional Meta Language) to increase the consistency, 
-        standardization, readability, and to seperate the logic from the test data in test automation 
-        development.
-
-        FunctMetaL is a mini language that uses pre-defined XML markup for its syntax. 
-        It's completely extensible through the concept of plug-ins. 
-        "}
-        
+      @introduction = Home.find_by_key("about").value
       @example = Home.find_by_key("example").value
       
       convertor = Syntax::Convertors::HTML.for_syntax "xml"

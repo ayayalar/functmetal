@@ -1,31 +1,24 @@
 
 #container
 {
-width: 90%;
-/*height:600px;*/
-margin: 10px auto;
-background-color: #fff;
-color: #333;
-line-height: 130%;
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+  color:#222
 }
-.normal {}
-.namespace { color: #B66; font-weight: bold; }
-.tag { color: #F88; }
-.comment { color: #005; font-style: italic; }
-.punct { color: #447; font-weight: bold; }
-.string { color: #944; }
-.number { color: #F99; }
-.attribute { color: #BB7; }
 
 #top
 {
-padding: .5em;
-background-color: #fff;
+	padding: .5em;
+	background-color: #fff;
 }
 
 #contents {
-position:absolute;
-z-index:1;
+	position:absolute;
+	z-index:1;
 }
 
 #navbar
@@ -35,66 +28,63 @@ z-index:1;
 
 #top h1
 {
-padding: 0;
-margin: 0;
-
+	padding: 0;
+	margin: 0;
 }
 
 #leftnav
 {
-float: left;
-width: 160px;
-margin: 0;
-padding: 1em;
-max-width: 20%;
+	float: left;
+	width: 160px;
+	margin: 0;
+	padding: 1em;
+	max-width: 20%;
 }
 
 #rightnav
 {
-float: right;
-width: 160px;
-margin: 0;
-padding: 1em;
-max-width: 20%;
+	float: right;
+	width: 160px;
+	margin: 0;
+	padding: 1em;
+	max-width: 20%;
 }
 
 #content
 {
-margin-left: 200px;
-margin-right: 200px;
-padding: 1em;
-max-width: 60%;
-/*max-height:500px;
-height:500px;*/
-border: 1px solid gray;
+	margin-left: 200px;
+	margin-right: 200px;
+	padding: 1em;
+	max-width: 60%;
+	/*max-height:500px;
+	height:500px;*/
+	border: 1px solid gray;
 }
 
 #footer
 {
-clear: both;
-margin: 0;
-padding: .5em;
-color: #333;
-background-color: #fff;
-/*border-top: 1px solid gray;*/
+	clear: both;
+	margin: 0;
+	padding: .5em;
+	color: #333;
+	background-color: #fff;
+	/*border-top: 1px solid gray;*/
 }
 
 #leftnav p, #rightnav p { margin: 0 0 1em 0; }
 #content h2 { margin: 0 0 .5em 0; }
 
-body, p, ol, ul, td {
-  background-color: #fff; color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
-  line-height: 18px;
-}
 body
 {
 	/*background-image: url('/images/metal.jpg');
   	background-repeat: repeat;*/
-	background-color: #ccc;
+	background-color: #4B7399;
+	font-family: Verdana, Helvetica, Arial;
+    font-size: 14px;
+    line-height: 18px;
 }
-pre {
+pre 
+{
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
@@ -104,7 +94,8 @@ a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
-.fieldWithErrors {
+.fieldWithErrors 
+{
   padding: 2px;
   background-color: red;
   display: table;
