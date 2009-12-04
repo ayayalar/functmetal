@@ -10,30 +10,10 @@ class HomeController < ApplicationController
         It's completely extensible through the concept of plug-ins. 
         "}
         
-      @example =
-      %{
-        <TestSuite>
-          <Test>
-            <!-- Launch ipconfig.exe -->
-            <Process name="ipconfig" output="foo" error="err" timeout="5">
-              <Arguments>
-                <Argument />
-              </Arguments>
-            </Process>
-
-            <!-- Declare a variable -->
-            <Variable name="blank" value="" />
-
-            <!-- Print out the output or the error message based on the outcome of ipconfig process -->
-            <If test="$(err) -ne $(blank)">
-              <Message text="Error: $(err) />
-            </If>
-            <Else>
-              <Message text="Success: $(foo) />
-            </Else>
-          <Test>
-        </TestSuite>
-      }
+      @example = Home.find_by_key("example").value
+      
+      convertor = Syntax::Convertors::HTML.for_syntax "xml"
+      @example_out = convertor.convert(@example)
   end
 
   def new
