@@ -1,66 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <meta name="google-site-verification" content="38Fxgq3Ca8g73FMRERmIBUvvrB082CCIFKX-oDjWeHs" />
-  <title>FunctMetaL: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'threefold' %>
-  <%= stylesheet_link_tag 'xml' %>
-  <%= javascript_include_tag :all, :cache => false %>
-</head>
-<body>
-<p style="color: green"><%= flash[:notice] %></p>
-
-<div id="container">
-<div id="top">
-	
-<h1>FunctMetaL</h1>
-<br />
-<br />
-</div>
-<div id="leftnav">
-	<%= link_to 'Home Page', home_index_path %><br />
-	<% if ! session[:user].nil? %>
-		<p>Welcome <%= session[:useremail] %></p>
-		<p><%= link_to "(Logout)", user_path(session[:user]), :method => "delete" %></p>
-	<% else %>
-		<p><%= link_to "Login", new_user_path %></p>
-	<% end %>
-	<br />
-	<strong>Test Automation Frameworks</strong><br />
-	<a href="http://seleniumhq.org/">Selenium</a><br />
-	<a href="http://watir.com/">WatiR</a><br />
-	<a href="http://watin.sourceforge.net/">WatiN</a><br />
-	<a href="http://watij.com/">WatiJ</a><br />
-	<a href="http://fit.c2.com/">FIT</a><br />
-	<a href="http://httpunit.sourceforge.net/">HttpUnit</a><br />
-	<a href="http://www.nunit.org/index.php">NUnit</a><br />
-	<a href="http://www.junit.org/">JUnit</a><br />
-	<a href="http://rspec.info/">RSpec</a><br />
-	<a href="http://testng.org/doc/documentation-main.html">TestNG</a><br />
-<p>
-</p>
-</div>
-<div id="rightnav">
-	<br />
-	<strong>FunctMetaLRuner</strong><br />
-	<a href="http://c2.com/cgi/wiki?TestDrivenDevelopment">Download</a><br />
-	<a href="http://c2.com/cgi/wiki?TestDrivenDevelopment">FunctMetaLRunner Tutorial</a><br />
-	<br />
-	<strong>Test Automation Methodologies</strong><br />
-	<a href="http://c2.com/cgi/wiki?TestDrivenDevelopment">TDD</a><br />
-	<a href="http://www.extremeprogramming.org/">Extreme Programming</a><br />
-	<a href="http://behaviour-driven.org/">BDD</a><br />
-<p>
-</p>
-</div>
-<div id="content">
-<%= yield %>
-</div>
-<div id="footer">
-</div>
-</div>
-</body>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="google-site-verification" content="38Fxgq3Ca8g73FMRERmIBUvvrB082CCIFKX-oDjWeHs" />
+		<title>
+			FunctMetaL: <%= controller.action_name %>
+		</title>
+		<%= stylesheet_link_tag '1' %>
+		<%= stylesheet_link_tag 'sIFR-print.css' %>
+		<%= stylesheet_link_tag 'sIFR-screen.css' %>
+		<%= stylesheet_link_tag 'xml' %>
+		<%= javascript_include_tag :all, :cache => false %>
+	</head>
+	<body>
+		<div id="header">
+			<h1>
+				<%= image_tag "gears.jpg"-%>
+				<%= link_to 'FunctMetaL', root_path -%>
+			</h1>
+			<ul id="nav">
+				<li>
+					<%= link_to 'Documentation', entities_path %>
+				</li>
+				<li>
+					<%= link_to 'FunctMetaLPad', funct_metal_pads_path %>
+				</li>
+				<li>
+					<%= link_to 'Source', sources_path %>
+				</li>
+				<li>
+					<%= link_to 'Contact', contacts_path %>
+				</li>
+				<li>
+					<% if !session[:user].nil? %>
+						<%= link_to "Logout", user_path(session[:user]), :method => "delete" -%>
+					<% else %>
+						<%= link_to "Login", new_user_path -%>
+					<% end %>
+					</li>
+			</ul>
+		</div>
+		<div id="container">
+			<div id="content">
+				<p>
+					<%= yield %>
+				</p>
+			</div>
+			<div id="sidebar">
+				<h3>
+					About
+				</h3>
+				<p class="about">
+					A small paragraph can go here describing your site; what it is here for, long term goals etc. Go nuts!
+				</p>
+			</div>
+		</div>
+		<div id="footer">
+			<p class="validate">
+				<a href="http://validator.w3.org/check?uri=referer">XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/">CSS</a><br />
+			</p>
+			<p>
+				 <%=link_to '©Turquoisesoft, Inc.', 'http://www.turquoisesoft.com' %>
+			</p>
+		</div><script type="text/javascript">
+	</body>
 </html>
