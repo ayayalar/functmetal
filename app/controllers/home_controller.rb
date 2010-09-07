@@ -1,11 +1,8 @@
 class HomeController < ApplicationController
   def index
       @about = "About"
-      @introduction = Home.find_by_key("about").value
-      @example = Home.find_by_key("example").value
-      
-      convertor = Syntax::Convertors::HTML.for_syntax "xml"
-      @example_out = convertor.convert(@example)
+      @introduction = Home.intro
+      @example_out = Home.example_code
   end
 
   def new

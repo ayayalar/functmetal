@@ -37,7 +37,7 @@ html {
 #footer .validate {
 	float:right;
 }
-
+/*
 table {
 	width:100%;
 	padding:10px;
@@ -54,7 +54,7 @@ td {
 	padding:5px;
 	text-align:center;
 	background:#fafafa;
-}
+}*/
 
 #container {
 	width:95%;
@@ -69,6 +69,11 @@ td {
 	border-bottom:1px solid #eee;
 	padding:10px;
 	color:#444;
+	text-decoration:none;
+}
+
+#content ul li a{
+	text-decoration:none;
 }
 
 #content img {
@@ -148,6 +153,14 @@ td {
 }
 
 blockquote {
+	background:#f6f6f6;
+	padding:10px 10px 10px 10px;
+	border:1px solid #eee;
+	font:100% Georgia;
+	font-size:90%;
+}
+
+.code {
 	background:#f6f6f6;
 	padding:10px 10px 10px 10px;
 	border:1px solid #eee;

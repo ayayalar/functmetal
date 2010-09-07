@@ -20,8 +20,7 @@ class FeaturesController < ApplicationController
 
   def show
     @feature = @entity.features.find(params[:id])
-    convertor = Syntax::Convertors::HTML.for_syntax "xml"
-    @feature.code = convertor.convert(@feature.code)
+    @code = highlight_code(@feature.code)
   end
   
   def edit
