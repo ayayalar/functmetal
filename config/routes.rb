@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :sources
+
+  map.resources :contacts
+
+  map.resources :funct_metal_pads
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

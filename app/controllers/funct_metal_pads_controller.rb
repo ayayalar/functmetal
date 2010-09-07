@@ -1,0 +1,2 @@
+class FunctMetalPadsController < ApplicationController
+end
