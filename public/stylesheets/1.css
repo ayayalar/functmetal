@@ -180,13 +180,14 @@ border-bottom: 1px solid #aaa;
 
 #content h2 {
 color: #666;
-font: 190% Verdana;
+font: 190% Arial;
 margin-top: 45px;
 }
 
 #content h3 {
 color: #666;
 margin: 20px 0;
+font: 150% Arial;
 }
 
 #content h2 a {
