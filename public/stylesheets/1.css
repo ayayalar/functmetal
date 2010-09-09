@@ -211,6 +211,15 @@ blockquote {
 	margin-left:35px;
 }
 
+.headerh1 {
+	color:#000;
+	font:290% Verdana;
+	letter-spacing:-2px;
+	margin-bottom:1px;
+	margin-left:35px;
+	text-decoration:none;
+}
+
 #header h1 a {
 	color:#000;
 	text-decoration:none;
