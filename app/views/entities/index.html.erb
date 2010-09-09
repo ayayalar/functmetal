@@ -1,7 +1,7 @@
 <strong>Features</strong>
 
 <% @entities.each do |e| %>
-<h3><%= e.description %></h3>
+<strong><i><%= e.description %></i></strong>
 <%= link_to e.title, entity_path(e) %>
 <% end %>
 
